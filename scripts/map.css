@@ -1,0 +1,176 @@
+p {
+  font-size:11px;
+}
+
+html {
+	background-color: #bbbbbb;
+	line-height: 100%;
+}
+
+body {
+	margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+	position: inherit;
+  	font-family: arial;
+  	font-size: 13px;
+  	width: 1000px;
+	position: relative;
+	background-color: #ffffff;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 15px;
+	line-height: 1;
+	margin:auto;
+	color: #094793;
+}
+
+a {
+	color: #505d8c;
+}
+
+.page {
+	border: 1px solid #696969;
+	background-color: white;
+}
+
+.explanation {
+	background: #fff bottom center no-repeat;
+	padding: 10px 30px 10px 30px;
+	padding-top:15px;
+	text-align: justify;
+	background-size: 100% 100%;
+}
+
+.footer {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	font-family: arial;
+	color: #696969;
+	text-align: center;
+	font-size: 0.857em;
+	text-align: center;
+	background: #eeeeee !important;
+	border-top: 6px solid #808080;
+	margin-top: 10%;
+	
+}
+
+.selector {
+	text-align: left;
+	width: 20%; 
+	vertical-align: top;
+	padding: 10px 30px 10px 30px;
+	margin-bottom: 1%;
+}
+
+.nuts_level {
+	width: 19%;
+	position: absolute;
+	margin-left: 1%;
+}
+
+.map_container {
+	width: 58.5%;
+	height: 58.5%;
+	border: 1.5px solid #094793;
+	position: relative;
+	margin-left: 20%;
+	margin-bottom: 1%;
+}
+
+#map {
+	width: 585px;
+	height: 585px;
+  }
+
+.info {
+	padding: 6px 12px;
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+  }
+
+.info h4 {
+	margin: 0 0 5px;
+	color: #777;
+  }
+
+.legend {
+	text-align: left;
+	line-height: 18px;
+	color: #555;
+	width: 30%;
+	white-space: nowrap;
+  }
+
+.legend i {
+	width: 40px;
+	height: 18px;
+	float: left;
+	margin-right: 10px;
+	opacity: 0.7;
+  }
+
+select { text-indent: 30px; }
+
+.quarters-slider {
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 2%;
+	float: left;
+}
+
+.quarters-slider label {
+	position: absolute;
+	width: 58px;
+	margin-left: -30px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font: normal 14px Arial, sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1000; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
