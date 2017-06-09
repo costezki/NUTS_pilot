@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Checks if a NUTS code changed between years
+Checks the changes of the NUTS code from a year, linked to the type of change and value, i.e. URI of the previous NUTS code. It creates a file 'list_changes_year.txt' with the result from the query in JSON. 
 
 Python ver: 3.5
 """

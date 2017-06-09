@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Checks if a NUTS code changed between years
+Checks if a NUTS code changed between years (split, merged and replaced). It stores the changes in a JSON file called 'data_year.txt', one per year.
 
 Python ver: 3.5
 """

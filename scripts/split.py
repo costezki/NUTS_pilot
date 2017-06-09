@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Checks if a NUTS code changed between years
+Stores the splits from a year to the next year (e.g. from 2013 to 2016) in the file 'changes_split_year.txt'. The structure is a JSON file with the value of the new URI, new code and new label. For example: {uri2013: {code: 2016code, label: 2016label, newuri: 2016uri} }.
+This script is created to optimise the user experience. It should be executed if there are changes in the triple store or if new geometries are included. 
 
 Python ver: 3.5
 """

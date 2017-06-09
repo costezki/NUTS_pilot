@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Checks if a NUTS code changed between years
+Stores all the properties and its values for all the NUTS code of a year in the file 'props_year.txt'. This script is created to optimise the user experience. It should be executed if there are changes in the triple store or if new geometries are included. 
 
 Python ver: 3.5
 """

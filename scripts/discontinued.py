@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Checks if a NUTS code changed between years
+Stores the codes that are discontinued from 2013 to 2016. This script is only needed because we do not have the geometries corresponding to 2016 and thus, the 2013 geometries have to be linked with the 2016 codes. They are stored in 'discontinued_2016.txt' in JSON.
 
 Python ver: 3.5
 """
