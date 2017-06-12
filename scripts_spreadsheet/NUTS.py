@@ -4,6 +4,12 @@
 from openpyxl import*
 import re
 
+#Maximum number of lines that the spreadsheet to process contains. Please update with the correct number
+max_lines = sys.argv[1]
+#Name of the input spreadsheet to process
+input_name = sys.argv[2]
+
+
 #Definition of methods
 def Replace(b,c,h,count):
 	if re.search('recoded',h):
@@ -37,7 +43,7 @@ def Status(b,c):
 		
 #Open workbook
 wb = Workbook()
-wb = load_workbook(filename = 'NUTS2013-NUTS2016_AF_ANA.xlsx')
+wb = load_workbook(filename = input_name)
 #Use code below if you want to be prompted for the input file
 #wb = load_workbook(filename = str(input("Give name of output file: ")))  
 
@@ -60,7 +66,7 @@ count_total=0
 
 #Aqcuire cell values
 i=3
-while i < 1968:
+while i < max_lines:
 #while i < sheet.max_row:
 #The function above can be used instead of hardcoding the maximum rows, but seems to make the script slower. Furtheromre the function seems to calculate more rows han contain data (probably because of formatting or something in Excel.
 	
@@ -82,7 +88,7 @@ print(count_total)
 #2. Narrow-Broad triples
 
 i=3
-while i < 1968:
+while i < max_lines:
 #while i < sheet.max_row:
 
 	colB='B'+str(i)
@@ -110,7 +116,7 @@ while i < 1968:
 #3. Status triples
 
 i=3
-while i < 1868:
+while i < max_lines:
 	
 	colB='B'+str(i)
 	colC='C'+str(i)
