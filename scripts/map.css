@@ -22,7 +22,8 @@ body {
 
 h1 {
 	text-align: center;
-	padding-top: 15px;
+	padding-top: 2%;
+	margin-bottom: 2%;
 	line-height: 1;
 	margin:auto;
 	color: #094793;
@@ -38,11 +39,15 @@ a {
 }
 
 .explanation {
-	background: #fff bottom center no-repeat;
-	padding: 10px 30px 10px 30px;
-	padding-top:15px;
+	background: #0b51a8 bottom center no-repeat;
+	color: #fff;
+	padding: 2% 5% 2% 5%;
 	text-align: justify;
 	background-size: 100% 100%;
+	margin-bottom: 1%;
+	margin-top: 2%;
+	margin-top: 2%;
+	border: 1px solid #808080;
 }
 
 .footer {
@@ -55,7 +60,7 @@ a {
 	text-align: center;
 	background: #eeeeee !important;
 	border-top: 6px solid #808080;
-	margin-top: 10%;
+	margin-top: 8%;
 	
 }
 
