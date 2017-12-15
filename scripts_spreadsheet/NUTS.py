@@ -15,32 +15,32 @@ input_name = sys.argv[2]
 def Replace(b,c,h,count):
 	if re.search('recoded',h):
 		print('recoded')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> dct:isReplacedBy <http://data.europa.eu/nuts/code/'+c+'>.\n')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> dct:Replaces <http://data.europa.eu/nuts/code/'+b+'>.\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> <http://purl.org/dc/terms/isReplacedBy> <http://data.europa.eu/nuts/code/'+c+'> .\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://purl.org/dc/terms/Replaces> <http://data.europa.eu/nuts/code/'+b+'> .\n')
 		count+=1
 	if re.search('boundary shift',h):
 		print('boundary shift')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> dct:isReplacedBy <http://data.europa.eu/nuts/code/'+c+'>.\n')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> dct:Replaces <http://data.europa.eu/nuts/code/'+b+'>.\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> <http://purl.org/dc/terms/isReplacedBy> <http://data.europa.eu/nuts/code/'+c+'> .\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://purl.org/dc/terms/Replaces> <http://data.europa.eu/nuts/code/'+b+'> .\n')
 		count+=1
 	if re.search('boundary change',h):
 		print('boundary shift')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> dct:isReplacedBy <http://data.europa.eu/nuts/code/'+c+'>.\n')
-		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> dct:Replaces <http://data.europa.eu/nuts/code/'+b+'>.\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> <http://purl.org/dc/terms/isReplacedBy> <http://data.europa.eu/nuts/code/'+c+'> .\n')
+		rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://purl.org/dc/terms/Replaces> <http://data.europa.eu/nuts/code/'+b+'> .\n')
 		count+=1
 	return count
 
 def Status(b,c):
 		if b == c:
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT>.\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .\n')
 		elif b != c:
 			if c == 'None':
-				rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> adms:status <http://publications.europa.eu/resource/authority/concept-status/DEPRECATED>.\n')
+				rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/authority/concept-status/DEPRECATED> .\n')
 			elif b == 'None':
-				rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT>.\n')
+				rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .\n')
 			else:
-				rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> adms:status <http://publications.europa.eu/resource/authority/concept-status/DEPRECATED>.\n')
-				rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT>.\n')
+				rdf_file.write('<http://data.europa.eu/nuts/code/'+b+'> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/authority/concept-status/DEPRECATED> .\n')
+				rdf_file.write('<http://data.europa.eu/nuts/code/'+c+'> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .\n')
 		
 #Open workbook
 wb = Workbook()
@@ -101,16 +101,16 @@ while i < max_lines:
 			colB0='B'+str(i)
 		elif sheet[colI].value == 1:
 			colB1='B'+str(i)
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> skos:broader <http://data.europa.eu/nuts/code/'+sheet[colB0].value+'>.\n')
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB0].value+'> skos:narrower <http://data.europa.eu/nuts/code/'+sheet[colB].value+'>.\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> <http://www.w3.org/2004/02/skos/core#broader> <http://data.europa.eu/nuts/code/'+sheet[colB0].value+'> .\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB0].value+'> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.europa.eu/nuts/code/'+sheet[colB].value+'> .\n')
 		elif sheet[colI].value == 2:
 			colB2='B'+str(i)
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> skos:broader <http://data.europa.eu/nuts/code/'+sheet[colB1].value+'>.\n')
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB1].value+'> skos:narrower <http://data.europa.eu/nuts/code/'+sheet[colB].value+'>.\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> <http://www.w3.org/2004/02/skos/core#broader> <http://data.europa.eu/nuts/code/'+sheet[colB1].value+'> .\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB1].value+'> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.europa.eu/nuts/code/'+sheet[colB].value+'> .\n')
 		elif sheet[colI].value == 3:
 			colB3='B'+str(i)
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> skos:broader <http://data.europa.eu/nuts/code/'+sheet[colB2].value+'>.\n')
-			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB2].value+'> skos:narrower <http://data.europa.eu/nuts/code/'+sheet[colB].value+'>.\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB].value+'> <http://www.w3.org/2004/02/skos/core#broader> <http://data.europa.eu/nuts/code/'+sheet[colB2].value+'> .\n')
+			rdf_file.write('<http://data.europa.eu/nuts/code/'+sheet[colB2].value+'> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.europa.eu/nuts/code/'+sheet[colB].value+'> .\n')
 
 	i+=1
 
