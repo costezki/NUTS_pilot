@@ -3,9 +3,10 @@
 
 from openpyxl import*
 import re
+import sys
 
 #Maximum number of lines that the spreadsheet to process contains. Please update with the correct number
-max_lines = sys.argv[1]
+max_lines = int(sys.argv[1])
 #Name of the input spreadsheet to process
 input_name = sys.argv[2]
 
