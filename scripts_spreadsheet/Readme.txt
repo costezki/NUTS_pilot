@@ -12,7 +12,7 @@ The steps to transform the NUTS evolution from the spreadsheet to RDF are:
 For example, the "nutsdata.xlsx" file with 2000 lines of data could be processed as follows:
 > python NUTS.py 2000 nutsdata.xlsx	
 	
-3. The python script does not create all the triples, it depends on the types of changes. For now, the script deals with Narrow/Broad relations between the codes, the status of the codes and the replacedBy/replaces relations for the codes that have a change of type (recoded/boundary shift/boundary change). If other changes may occur, extra triples need to be created. This can be done by extending the script or by creating the triples manually.
+3. The python script does not create all the triples, it depends on the types of changes. For now, the script deals with Narrow/Broad relations between the codes, the status of the codes and the replacedBy/replaces relations for the codes that have a change of type (recoded/boundary shift/boundary change). If other changes may occur, extra triples need to be created. This can be done by extending the script or by creating the triples manually. For instance, merges and splits are not created automatically and must be created manually.
  
 4. Consolidate all results, i.e. the triples from Google Refine, from the execution of the script and the triples manually created.
 
