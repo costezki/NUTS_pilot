@@ -19,5 +19,7 @@ For example, the "nutsdata.xlsx" file with 2000 lines of data could be processed
 
 5. Upload the consolidated file to virtuoso, from which an RDF file can be retrieved.
 
+6. Check the RDF file for duplicate preferred labels and remove the ones that are superfluous.
+
 
 More detailed descriptions can be found in NUTStechnicalguide.pdf
