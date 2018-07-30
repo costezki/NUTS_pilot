@@ -106,9 +106,11 @@ def generate_geometry_instances(nuts_ds=get_nuts_graph(), scheme=SCHEME_2016):
             gg.add((distribution, RDF.type, DCAT.Distribution))
             gg.add((distribution, DCAT.downloadURL, rdflib.Literal(serv.url_nuts(unit=notation, year=2016, scale=scl))))
             gg.add((distribution, DCTERMS.term("format"), GEOJSON_FORMAT))
+            gg.add((distribution, SKOS.note,
+                    rdflib.Literal(
+                        "for information regarding commercial licensing please see https://eurogeographics.org/products-and-services/licensing")))
             gg.add((distribution, DCTERMS.license,
-                    rdflib.Literal("https://eurogeographics.org/products-and-services/licensing")))
-
+                    rdflib.URIRef("http://purl.org/NET/rdflicense/EUPL1.1")))
     return gg
 
 
