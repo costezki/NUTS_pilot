@@ -1,0 +1,62 @@
+{
+    "countries-2001": {
+        "date": "01/12/2003",
+        "documentation": "countries-2001.txt",
+        "files": "countries-2001.json",
+        "title": "Countries 2001"
+    },
+    "countries-2006": {
+        "date": "01/12/2008",
+        "documentation": "countries-2006.txt",
+        "files": "countries-2006.json",
+        "title": "Countries 2006"
+    },
+    "countries-2010": {
+        "date": "01/12/2012",
+        "documentation": "countries-2010.txt",
+        "files": "countries-2010.json",
+        "title": "Countries 2010"
+    },
+    "countries-2013": {
+        "date": "01/12/2015",
+        "documentation": "countries-2013.txt",
+        "files": "countries-2013.json",
+        "title": "Countries 2013"
+    },
+    "countries-2016": {
+        "date": "01/12/2018",
+        "documentation": "countries-2016.txt",
+        "files": "countries-2016.json",
+        "title": "Countries 2016"
+    },
+    "nuts-2003": {
+        "date": "03/12/2005",
+        "documentation": "nuts-2003.txt",
+        "files": "nuts-2003.json",
+        "title": "NUTS 2003"
+    },
+    "nuts-2006": {
+        "date": "01/12/2008",
+        "documentation": "nuts-2006.txt",
+        "files": "nuts-2006.json",
+        "title": "NUTS 2006"
+    },
+    "nuts-2010": {
+        "date": "01/12/2012",
+        "documentation": "nuts-2010.txt",
+        "files": "nuts-2010.json",
+        "title": "NUTS 2010"
+    },
+    "nuts-2013": {
+        "date": "03/12/2015",
+        "documentation": "nuts-2013.txt",
+        "files": "nuts-2013.json",
+        "title": "NUTS 2013"
+    },
+    "nuts-2016": {
+        "date": "01/01/2018",
+        "documentation": "nuts-2016.txt",
+        "files": "nuts-2016.json",
+        "title": "NUTS 2016"
+    }
+}
