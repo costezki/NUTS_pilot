@@ -16,7 +16,7 @@ NUTS_NS = rdflib.Namespace('http://data.europa.eu/nuts/')
 ADMS = rdflib.Namespace('http://www.w3.org/2004/02/skos/core#')
 SKOSXL = rdflib.Namespace('http://www.w3.org/2008/05/skos-xl#')
 LOCN = rdflib.Namespace('https://www.w3.org/ns/locn#')
-DCAT = rdflib.Namespace('https://www.w3.org/TR/vocab-dcat/')
+DCAT = rdflib.Namespace('http://www.w3.org/ns/dcat#')
 MDR_FT = rdflib.Namespace('http://publications.europa.eu/resource/authority/file-type/')
 
 NUTS_DISTR = rdflib.Namespace('http://data.europa.eu/nuts/distribution/')
@@ -109,6 +109,9 @@ def generate_geometry_instances(nuts_ds=get_nuts_graph(), scheme=SCHEME_2016):
             gg.add((distribution, SKOS.note,
                     rdflib.Literal(
                         "for information regarding commercial licensing please see https://eurogeographics.org/products-and-services/licensing")))
+            gg.add((distribution, SKOS.note,
+                    rdflib.Literal(
+                        "for general information about NUTS codes please see http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units")))
             gg.add((distribution, DCTERMS.license,
                     rdflib.URIRef("http://purl.org/NET/rdflicense/EUPL1.1")))
     return gg
