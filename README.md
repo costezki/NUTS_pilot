@@ -2,8 +2,9 @@
 This extension of the NUTS pilor ptoject inclused the generation of the GISCO 
 including the geography descriptions pointing towards [GISCO datasets](http://ec.europa.eu/eurostat/cache/GISCO/distribution/v1/)
 
-The generated NUTS extension can be found [here](https://github.com/costezki/NUTS_pilot/blob/master/datasets/nuts_links.ttl) 
-The source code for generating can be found [here](https://github.com/costezki/NUTS_pilot/blob/master/scripts/geometry_gen.py)
+The generated NUTS extension can be found [here](https://github.com/costezki/NUTS_pilot/blob/master/datasets/nuts_links.ttl).
+
+The source code for generating can be found [here](https://github.com/costezki/NUTS_pilot/blob/master/scripts/geometry_gen.py).
 
 ##Install
 
